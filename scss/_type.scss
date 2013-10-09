@@ -1,0 +1,48 @@
+h1, h2, h3, h4, h5, h6, li, p {
+	@extend %smooth;
+	@extend %font;
+}
+
+h1, h2 {
+	color: $brand_color;
+	font-size: 1.75rem;
+}
+
+h2 {
+	color: $dark_color;
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+h3, h4, h5, h6 {
+	font-size: 1rem;
+}
+
+ul {
+	margin-top: 0;
+	padding-left: 2em;
+}
+
+li, p {
+	font-size: 1rem;
+	line-height: 1.75em;
+	margin: 0 0 1.5em 0;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+li {
+	margin-bottom: 0;
+}
+
+a {
+	@extend %animated;
+	color: $brand_color;
+	text-decoration: none;
+
+	&:hover {
+		color: $brand_color_dark;
+	}
+}

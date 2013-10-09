@@ -1,0 +1,67 @@
+input:not([type="button"]), textarea, select {
+	@extend %animated;
+	@extend %font;
+	color: $dark_color;
+	background-color: $overlay_color;
+	box-shadow: none;
+	outline: none;
+	font-size: 1rem;
+	height: 3rem;
+	border: none;
+	border-bottom: 1px solid $ghosted_color;
+	padding: 0 .5em;
+
+	&:focus {
+		border-color: $dark_color;
+	}
+
+	&::-webkit-input-placeholder,::-moz-placeholder, &:-ms-input-placeholder, &::placeholder {
+		color: $ghosted_color;
+		font-size: .9em;
+	}
+}
+
+select {
+	-webkit-appearance: none;
+}
+
+label.custom {
+	@extend %smooth;
+	font-weight: 300;
+	position: relative;
+	font-size: 1.33rem;
+	cursor: pointer;
+	padding-left: 1.35em;
+
+	> input[type="radio"], > input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		height: 1em;
+
+		+ span {
+			@extend %animated;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -.5em;
+			height: 1em;
+			width: 1em;
+			border-radius: 1em;
+			border: 2px solid $brand_color;
+			display: block;
+		}
+
+		&:checked {
+			+ span {
+				box-shadow: $light_color 0 0 0 5px inset;
+				background-color: $brand_color;
+			}
+		}
+	}
+
+	> input[type='checkbox'] {
+		+ span {
+			border-radius: 3px;
+		}
+	}
+}

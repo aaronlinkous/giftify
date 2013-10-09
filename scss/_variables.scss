@@ -1,0 +1,32 @@
+$brand_color: #08c681;
+$brand_color_dark: #069d66;
+
+$overlay_color: #dce5eb;
+$light_color: #eef2f5;
+$ghosted_color: #a4acb2;
+$dark_color: #3c4d59;
+$alert_color: #ea1e4e;
+
+$grid: 60px;
+$gutter: 20px;
+
+%smooth {
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-feature-settings: 'liga', 'dlig';
+	-moz-font-feature-settings: 'liga', 'dlig';
+	font-feature-settings: 'liga', 'dlig';
+	text-rendering: optimizeLegibility;
+}
+
+%animated {
+	-moz-transition: all 0.125s ease-in-out;
+	-webkit-transition: all 0.125s ease-in-out;
+	transition: all 0.125s ease-in-out;
+}
+
+%font {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 300;
+	color: $dark_color;
+	line-height: 1.5em;
+}

@@ -1,0 +1,39 @@
+html, body {
+	@extend %smooth;
+	background-color: $light_color;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 18px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: $dark_color;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+header {
+	background: $brand_color;
+	background: -moz-radial-gradient(top, ellipse cover, $brand_color 0%,  $brand_color_dark 100%);
+	background: -webkit-radial-gradient(top, ellipse cover, $brand_color 0%, $brand_color_dark 100%);
+	background: -o-radial-gradient(top, ellipse cover, $brand_color 0%, $brand_color_dark 100%);
+	background: -ms-radial-gradient(top, ellipse cover, $brand_color 0%, $brand_color_dark 100%);
+	background: radial-gradient(ellipse at top, $brand_color 0%, $brand_color_dark 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand_color', endColorstr=' $brand_color_dark',GradientType=1 );
+	height: $grid*5;
+}
+
+article {
+	margin: 0 auto;
+	width: $grid*16;
+}
+
+.row {
+	margin: 0 0 1.5em 0;
+}
