@@ -3,7 +3,10 @@ function check_val(input) {
 }
 
 $(document).ready(function(){
-	$("#date").pickadate();
+	$("#date").pickadate({
+		today: '',
+		clear: ''
+	});
 	$("#time").pickatime();
 
 	$(".check_val").each(function(){
