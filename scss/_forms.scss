@@ -96,7 +96,7 @@ label.custom {
 }
 
 .has_value {
-	+ .label, + .picker + .label {
+	.label {
 		top: -4px;
 		opacity: 1;
 	}

@@ -1,11 +1,13 @@
 function check_val(input) {
-	$(input).val() != "" ? $(input).addClass("has_value") : $(input).removeClass("has_value");
+	$(input).val() != "" ? $(input).parent().addClass("has_value") : $(input).parent().removeClass("has_value");
 }
 
 $(document).ready(function(){
 	$("#date").pickadate({
 		today: '',
-		clear: ''
+		clear: '',
+		formatSubmit: 'yyyy/mm/dd',
+		hiddenSuffix: '_submit_me'
 	});
 	$("#time").pickatime();
 
@@ -17,6 +19,6 @@ $(document).ready(function(){
 
 	$("input, select, textarea").each(function(){
 		label = $(this).attr("placeholder");
-		$(this).parent().append('<div class="label">'+label+'</div>');
+		if(label) $(this).parent().append('<div class="label">'+label+'</div>');
 	});
 });

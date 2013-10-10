@@ -181,7 +181,7 @@ label.custom.disabled {
 }
 
 /* line 99, ../scss/_forms.scss */
-.has_value + .label, .has_value + .picker + .label {
+.has_value .label {
   top: -4px;
   opacity: 1;
 }
