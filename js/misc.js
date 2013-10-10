@@ -9,7 +9,11 @@ $(document).ready(function(){
 		formatSubmit: 'yyyy/mm/dd',
 		hiddenSuffix: '_submit_me'
 	});
-	$("#time").pickatime();
+	
+	$("#time").pickatime({
+		formatSubmit: 'HH:i',
+		hiddenSuffix: '_submit_me'
+	});
 
 	$(".check_val").each(function(){
 		check_val(this);
