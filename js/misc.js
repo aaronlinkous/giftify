@@ -3,17 +3,16 @@ function check_val(input) {
 }
 
 $(document).ready(function(){
+	$("#date").pickadate();
+	$("#time").pickatime();
+
 	$(".check_val").each(function(){
 		check_val(this);
 	}).on("keyup click blur focus change paste", function(){
 		check_val(this);
 	});
 
-	$("input, select, textarea").on("focus",function(e){
-		$("body").addClass("fix_fixed");
-	}).on("blur", function(e){
-		$("body").removeClass("fix_fixed");
-	}).each(function(){
+	$("input, select, textarea").each(function(){
 		label = $(this).attr("placeholder");
 		$(this).parent().append('<div class="label">'+label+'</div>');
 	});

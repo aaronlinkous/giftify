@@ -4,6 +4,9 @@
 		<title>Giftify | Gift Exchanges Made Easy</title>
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="screen" />
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="js/picker.js"></script>
+		<script src="js/picker.date.js"></script>
+		<script src="js/picker.time.js"></script>
 		<script src="js/misc.js"></script>
 	</head>
 	<body>
@@ -21,25 +24,17 @@
 			<form>
 				<div class="row split">
 					<div>
-						<input class="check_val" name="fname" type="text" placeholder="First Name" />
-					</div>
-
-					<div>
-						<input class="check_val" name="lname" type="text" placeholder="Last  Name" />
-					</div>
-				</div>
-
-				<div class="row">
-					<input class="check_val" name="email" type="email" placeholder="Email" />
-				</div>
-
-				<div class="row split">
-					<div>
 						<input class="check_val" name="name" type="text" placeholder="Event Name" />
 					</div>
 
-					<div>
-						<input class="check_val" id="date" name="date" type="text" placeholder="Event Date" />
+					<div class="split">
+						<div>
+							<input class="check_val" id="date" name="date" type="text" placeholder="Event Date" />
+						</div>
+	
+						<div>
+							<input class="check_val" id="time" name="time" type="text" placeholder="Event Time" />
+						</div>
 					</div>
 				</div>
 
@@ -52,6 +47,38 @@
 						<input class="check_val" name="limit" type="text" placeholder="Gift Limit" />
 					</div>
 				</div>
+
+				<div class="row extra_margin">
+					<label class="custom">
+						<input tabindex="-1" name="radio" type="radio" checked /><span></span> Private Event
+					</label>
+
+					<label class="custom disabled">
+						<input tabindex="-1" name="radio" type="radio" disabled /><span></span> Public Event (Coming Soon!)
+					</label>
+				</div>
+
+<!--
+				<div class="row split">
+					<div>
+						<input class="check_val" name="fname" type="text" placeholder="First Name" />
+					</div>
+
+					<div>
+						<input class="check_val" name="lname" type="text" placeholder="Last  Name" />
+					</div>
+				</div>
+
+				<div class="row split">
+					<div>
+						<input class="check_val" name="email" type="email" placeholder="Email" />
+					</div>
+
+					<div>
+						<input class="check_val" name="password" type="password" placeholder="Password" />
+					</div>
+				</div>
+-->
 			</form>
 		</article>
 	</body>

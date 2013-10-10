@@ -12,13 +12,22 @@ input:not([type="button"]), textarea, select {
 	border-bottom: 1px solid $ghosted_color;
 	padding: 0 .5em;
 
+	&:hover {
+		background-color: rgba($overlay_color, .25);
+	}
+
 	&:focus {
 		border-color: $dark_color;
+		background-color: transparent;
 	}
 
 	&::-webkit-input-placeholder,::-moz-placeholder, &:-ms-input-placeholder, &::placeholder {
 		color: $ghosted_color;
 		font-size: .9em;
+	}
+
+	&.is_correct {
+		border-bottom-color: $brand_color;
 	}
 }
 
@@ -33,10 +42,11 @@ label.custom {
 	font-size: 1.33rem;
 	cursor: pointer;
 	padding-left: 1.35em;
+	margin-right: $gutter;
 
 	> input[type="radio"], > input[type="checkbox"] {
 		position: absolute;
-		opacity: 0;
+		opacity: 0 !important;
 		height: 1em;
 
 		+ span {
@@ -65,6 +75,12 @@ label.custom {
 			border-radius: 3px;
 		}
 	}
+
+	&.disabled {
+		opacity: .5;
+		font-style: italic;
+		cursor: default;
+	}
 }
 
 .label {
@@ -80,7 +96,7 @@ label.custom {
 }
 
 .has_value {
-	+ .label {
+	+ .label, + .picker + .label {
 		top: -4px;
 		opacity: 1;
 	}
