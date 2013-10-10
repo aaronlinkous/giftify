@@ -1,46 +1,58 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title></title>
+		<title>Giftify | Gift Exchanges Made Easy</title>
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="screen" />
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="js/misc.js"></script>
 	</head>
 	<body>
-		<header></header>
+		<header>
+			<section id="headline">
+				<h1>Creating a Gift Exchange in just two simple steps.</h1>
+			</section>
+		</header>
 
-		<article>
-			<input type="text" placeholder="Placeholder" />
-			
-			<label class="custom">
-				<input name="radio" type="radio" checked /><span></span> Radio
-			</label>
+		<article id="wrapper">
+			<div class="row">
+				<p>First, we just need some basic information about the Event. Then we'll ask you about your guests.</p>
+			</div>
 
-			<label class="custom">
-				<input name="radio" type="radio" /><span></span> Radio
-			</label>
+			<form>
+				<div class="row split">
+					<div>
+						<input class="check_val" name="fname" type="text" placeholder="First Name" />
+					</div>
 
-			<label class="custom">
-				<input name="check" type="checkbox" checked /><span></span> checkbox
-			</label>
+					<div>
+						<input class="check_val" name="lname" type="text" placeholder="Last  Name" />
+					</div>
+				</div>
 
-			<label class="custom">
-				<input name="check" type="checkbox" /><span></span> checkbox
-			</label>
-			
-			<h1>H1 Text</h1>
-			<h2>H2 Text</h2>
-			<p>Lorem ipsum dolor sit amet, <a href="">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="row">
+					<input class="check_val" name="email" type="email" placeholder="Email" />
+				</div>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="row split">
+					<div>
+						<input class="check_val" name="name" type="text" placeholder="Event Name" />
+					</div>
 
-			<ul>
-				<li>Some text</li>
-				<li>Some more text</li>
-				<li>YEAH!</li>
-			</ul>
+					<div>
+						<input class="check_val" id="date" name="date" type="text" placeholder="Event Date" />
+					</div>
+				</div>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="row split">
+					<div>
+						<input class="check_val" id="location" name="date" type="text" placeholder="Event Location" />
+					</div>
+
+					<div>
+						<input class="check_val" name="limit" type="text" placeholder="Gift Limit" />
+					</div>
+				</div>
+			</form>
 		</article>
 	</body>
 </html>

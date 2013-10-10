@@ -1,8 +1,9 @@
 input:not([type="button"]), textarea, select {
 	@extend %animated;
 	@extend %font;
+	width: 100%;
 	color: $dark_color;
-	background-color: $overlay_color;
+	background-color: transparent;
 	box-shadow: none;
 	outline: none;
 	font-size: 1rem;
@@ -42,7 +43,7 @@ label.custom {
 			@extend %animated;
 			position: absolute;
 			top: 50%;
-			left: 0;
+			left: 1px;
 			margin-top: -.5em;
 			height: 1em;
 			width: 1em;
@@ -63,5 +64,24 @@ label.custom {
 		+ span {
 			border-radius: 3px;
 		}
+	}
+}
+
+.label {
+	@extend %animated;
+	position: absolute;
+	z-index: 0;
+	opacity: 0;
+	top: 0;
+	left: 1px;
+	color: $brand_color;
+	font-weight: 700;
+	font-size: 10px;
+}
+
+.has_value {
+	+ .label {
+		top: -4px;
+		opacity: 1;
 	}
 }

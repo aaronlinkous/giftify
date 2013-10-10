@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, li, p, label.custom, html, body {
 }
 
 /* line 21, ../scss/_variables.scss */
-a, input:not([type="button"]), textarea, select, label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span {
+a, input:not([type="button"]), textarea, select, label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span, .label {
   -moz-transition: all 0.125s ease-in-out;
   -webkit-transition: all 0.125s ease-in-out;
   transition: all 0.125s ease-in-out;
@@ -20,6 +20,22 @@ h1, h2, h3, h4, h5, h6, li, p, input:not([type="button"]), textarea, select {
   font-weight: 300;
   color: #3c4d59;
   line-height: 1.5em;
+}
+
+/* line 34, ../scss/_variables.scss */
+.row {
+  clear: both;
+}
+/* line 37, ../scss/_variables.scss */
+.row:after, .row:before {
+  display: table;
+  content: "";
+  line-height: 0;
+  visibility: hidden;
+}
+/* line 44, ../scss/_variables.scss */
+.row:after {
+  clear: both;
 }
 
 /* line 6, ../scss/_type.scss */
@@ -74,8 +90,9 @@ a:hover {
 
 /* line 1, ../scss/_forms.scss */
 input:not([type="button"]), textarea, select {
+  width: 100%;
   color: #3c4d59;
-  background-color: #dce5eb;
+  background-color: transparent;
   box-shadow: none;
   outline: none;
   font-size: 1rem;
@@ -84,22 +101,22 @@ input:not([type="button"]), textarea, select {
   border-bottom: 1px solid #a4acb2;
   padding: 0 .5em;
 }
-/* line 14, ../scss/_forms.scss */
+/* line 15, ../scss/_forms.scss */
 input:not([type="button"]):focus, textarea:focus, select:focus {
   border-color: #3c4d59;
 }
-/* line 18, ../scss/_forms.scss */
+/* line 19, ../scss/_forms.scss */
 input:not([type="button"])::-webkit-input-placeholder, input:not([type="button"]) ::-moz-placeholder, input:not([type="button"]):-ms-input-placeholder, input:not([type="button"])::placeholder, textarea::-webkit-input-placeholder, textarea ::-moz-placeholder, textarea:-ms-input-placeholder, textarea::placeholder, select::-webkit-input-placeholder, select ::-moz-placeholder, select:-ms-input-placeholder, select::placeholder {
   color: #a4acb2;
   font-size: .9em;
 }
 
-/* line 24, ../scss/_forms.scss */
+/* line 25, ../scss/_forms.scss */
 select {
   -webkit-appearance: none;
 }
 
-/* line 28, ../scss/_forms.scss */
+/* line 29, ../scss/_forms.scss */
 label.custom {
   font-weight: 300;
   position: relative;
@@ -107,17 +124,17 @@ label.custom {
   cursor: pointer;
   padding-left: 1.35em;
 }
-/* line 36, ../scss/_forms.scss */
+/* line 37, ../scss/_forms.scss */
 label.custom > input[type="radio"], label.custom > input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   height: 1em;
 }
-/* line 41, ../scss/_forms.scss */
+/* line 42, ../scss/_forms.scss */
 label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 1px;
   margin-top: -0.5em;
   height: 1em;
   width: 1em;
@@ -125,19 +142,37 @@ label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"]
   border: 2px solid #08c681;
   display: block;
 }
-/* line 55, ../scss/_forms.scss */
+/* line 56, ../scss/_forms.scss */
 label.custom > input[type="radio"]:checked + span, label.custom > input[type="checkbox"]:checked + span {
   box-shadow: #eef2f5 0 0 0 5px inset;
   background-color: #08c681;
 }
-/* line 63, ../scss/_forms.scss */
+/* line 64, ../scss/_forms.scss */
 label.custom > input[type='checkbox'] + span {
   border-radius: 3px;
 }
 
+/* line 70, ../scss/_forms.scss */
+.label {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  top: 0;
+  left: 1px;
+  color: #08c681;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+/* line 83, ../scss/_forms.scss */
+.has_value + .label {
+  top: -4px;
+  opacity: 1;
+}
+
 /* line 1, ../scss/_core.scss */
 html, body {
-  background-color: #eef2f5;
+  background-color: #dce5eb;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -159,6 +194,7 @@ img {
 
 /* line 21, ../scss/_core.scss */
 header {
+  position: relative;
   background: #08c681;
   background: -moz-radial-gradient(top, ellipse cover, #08c681 0%, #069d66 100%);
   background: -webkit-radial-gradient(top, ellipse cover, #08c681 0%, #069d66 100%);
@@ -169,13 +205,80 @@ header {
   height: 300px;
 }
 
-/* line 32, ../scss/_core.scss */
-article {
-  margin: 0 auto;
+/* line 33, ../scss/_core.scss */
+#headline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
   width: 960px;
+  margin-left: -480px;
+  text-align: center;
+  background-color: #eef2f5;
 }
 
-/* line 37, ../scss/_core.scss */
+/* line 43, ../scss/_core.scss */
+#wrapper {
+  margin: 0 auto;
+  width: 960px;
+  background-color: #eef2f5;
+  padding: 1.75rem 0 1.75rem;
+}
+
+/* line 1, ../scss/_grid.scss */
 .row {
-  margin: 0 0 1.5em 0;
+  position: relative;
+  margin: 0 20px 1.5rem;
+}
+/* line 6, ../scss/_grid.scss */
+.row.full_width {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+
+/* line 14, ../scss/_grid.scss */
+.split {
+  display: -webkit-box;
+  display: box;
+}
+/* line 18, ../scss/_grid.scss */
+.split.align_center {
+  -webkit-box-pack: center;
+}
+/* line 22, ../scss/_grid.scss */
+.split > * {
+  position: relative;
+  width: 0;
+  margin-right: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  box-flex: 1;
+  flex: 1;
+}
+/* line 31, ../scss/_grid.scss */
+.split > *:last-child {
+  margin-right: 0;
+}
+/* line 36, ../scss/_grid.scss */
+.split > .extra_width {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  box-flex: 2;
+  flex: 2;
+}
+
+/* line 45, ../scss/_grid.scss */
+.no_margin {
+  margin-bottom: 0 !important;
+}
+
+/* line 49, ../scss/_grid.scss */
+.quarter_margin {
+  margin-bottom: .375rem !important;
+}
+
+/* line 53, ../scss/_grid.scss */
+.half_margin {
+  margin-bottom: .75rem !important;
 }

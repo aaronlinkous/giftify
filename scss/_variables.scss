@@ -30,3 +30,18 @@ $gutter: 20px;
 	color: $dark_color;
 	line-height: 1.5em;
 }
+
+%clear {
+	clear: both;
+
+	&:after,&:before {
+		display: table;
+		content: "";
+		line-height: 0;
+		visibility: hidden;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
