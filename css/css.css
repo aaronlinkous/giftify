@@ -247,7 +247,7 @@ label.custom.disabled {
   margin: 0 0 3px 5%;
   padding: 0;
   list-style: none;
-  background-color: rgba(234, 30, 78, 0.85);
+  background-color: rgba(234, 30, 78, 0.9);
   width: 90%;
   border-radius: 2px;
 }
@@ -257,7 +257,7 @@ label.custom.disabled {
   text-align: center;
   color: #eef2f5;
   text-shadow: 1px 1px 1px #ab1035;
-  font-size: .75rem;
+  font-size: .7rem;
   padding: .5em;
 }
 /* line 183, ../scss/_forms.scss */

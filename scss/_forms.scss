@@ -167,7 +167,7 @@ label.custom {
 	margin: 0 0 3px 5%;
 	padding: 0;
 	list-style: none;
-	background-color: rgba($alert_color, .85);
+	background-color: rgba($alert_color, .9);
 	width: 90%;
 	border-radius: 2px;
 
@@ -176,7 +176,7 @@ label.custom {
 		text-align: center;
 		color: $light_color;
 		text-shadow: 1px 1px 1px darken($alert_color, 15%);
-		font-size: .75rem;
+		font-size: .7rem;
 		padding: .5em;
 	}
 

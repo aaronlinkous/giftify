@@ -11,6 +11,7 @@ $(document).ready(function(){
 	});
 	
 	$("#time").pickatime({
+		clear: '',
 		formatSubmit: 'HH:i',
 		hiddenSuffix: '_submit_me'
 	});
