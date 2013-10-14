@@ -291,6 +291,32 @@ label.custom.disabled {
   border-top-color: rgba(234, 30, 78, 0.85);
 }
 
+/* line 199, ../scss/_forms.scss */
+#email_upload {
+  background-image: url("../images/drop_csv@2x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 110px auto;
+  background-color: rgba(220, 229, 235, 0.5);
+  box-shadow: 0 0 2px 2px #eef2f5 inset;
+  border: 1px solid #a4acb2;
+  border-radius: 3px;
+  height: 6rem;
+}
+
+/* line 211, ../scss/_forms.scss */
+#email_upload_submit_me {
+  position: absolute;
+  z-index: 2;
+  height: 6rem;
+  opacity: 0;
+}
+
+/* line 218, ../scss/_forms.scss */
+#man_email {
+  display: none;
+}
+
 /* line 1, ../scss/_core.scss */
 html, body {
   background-color: #dce5eb;
@@ -314,6 +340,17 @@ img {
 }
 
 /* line 21, ../scss/_core.scss */
+.center {
+  text-align: center;
+  display: block;
+}
+
+/* line 26, ../scss/_core.scss */
+.detail {
+  font-size: .85rem;
+}
+
+/* line 30, ../scss/_core.scss */
 header {
   position: relative;
   background: #08c681;
@@ -326,34 +363,34 @@ header {
   height: 360px;
 }
 
-/* line 33, ../scss/_core.scss */
+/* line 42, ../scss/_core.scss */
 nav {
   position: absolute;
   top: 20px;
   right: 20px;
 }
-/* line 38, ../scss/_core.scss */
+/* line 47, ../scss/_core.scss */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 44, ../scss/_core.scss */
+/* line 53, ../scss/_core.scss */
 nav ul li {
   float: left;
 }
-/* line 49, ../scss/_core.scss */
+/* line 58, ../scss/_core.scss */
 nav span {
   line-height: 3rem;
   height: 3rem;
   border-radius: 50%;
 }
-/* line 55, ../scss/_core.scss */
+/* line 64, ../scss/_core.scss */
 nav span:hover {
   background-color: #08c681;
 }
 
-/* line 62, ../scss/_core.scss */
+/* line 71, ../scss/_core.scss */
 #headline {
   position: absolute;
   bottom: 0;
@@ -364,17 +401,12 @@ nav span:hover {
   background-color: #eef2f5;
 }
 
-/* line 72, ../scss/_core.scss */
+/* line 81, ../scss/_core.scss */
 #wrapper {
   margin: 0 auto;
   width: 960px;
   background-color: #eef2f5;
   padding: 1.75rem 0 1.75rem;
-}
-
-/* line 79, ../scss/_core.scss */
-#email_upload {
-  display: none;
 }
 
 /* line 1, ../scss/_grid.scss */

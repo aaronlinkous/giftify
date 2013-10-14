@@ -39,18 +39,12 @@ $(document).ready(function(){
 		e.stopPropagation();
 		which = $(this).attr("data-toggle");
 
-		$("#"+which).slideToggle();
-	});
-}).on('drop dragleave dragend', function (event) {  
-	dropZoneVisible = false;
-
-	clearTimeout(dropZoneTimer);
-		dropZoneTimer = setTimeout( function(){
-		if(!dropZoneVisible) {
-			$('#email_upload').show(); 
+		$("#"+which).toggleClass("not_visible").slideToggle();
+		
+		if($("#"+which).hasClass("not_visible")) {
+			$("#"+which).next().find(".check_val:first").focus();
 		} else {
-			dropZoneVisible = false;
-			$('#email_upload').hide(); 
+			$("#"+which).find(".check_val:first").focus();
 		}
-	}, 50);
+	});
 });

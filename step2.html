@@ -62,11 +62,17 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div id="email_upload">
-						hey!
-					</div>
-					<textarea placeholder="Make drag and drop/select file default" required="required" data-trigger="blur"></textarea>
+				<div class="row half_margin">
+					<input type="file" id="email_upload_submit_me" />
+					<div id="email_upload"></div>
+				</div>
+
+				<div class="row center">
+					<a href="#emails" class="detail" data-toggle="man_email">enter emails manually</a>
+				</div>
+
+				<div id="man_email" class="row not_visible">
+					<textarea name="emails" id="emails" class="check_val" placeholder="Make drag and drop/select file default" required="required" data-trigger="blur"></textarea>
 				</div>
 
 				<div class="row">
