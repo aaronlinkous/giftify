@@ -9,6 +9,10 @@
 		margin-right: 0;
 		border-radius: 0;
 	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .split {
