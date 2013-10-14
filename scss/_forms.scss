@@ -52,7 +52,7 @@ select {
 	-webkit-appearance: none;
 }
 
-button {
+button, input[type='submit'] {
 	@extend %font;
 	@extend %smooth;
 	display: block;

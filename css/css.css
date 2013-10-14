@@ -1,5 +1,5 @@
 /* line 13, ../scss/_variables.scss */
-h1, h2, h3, h4, h5, h6, li, p, button, label.custom, html, body {
+h1, h2, h3, h4, h5, h6, li, p, button, input[type='submit'], label.custom, html, body {
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: 'liga', 'dlig';
   -moz-font-feature-settings: 'liga', 'dlig';
@@ -15,7 +15,7 @@ a, input:not([type="button"]), textarea, select, label.custom > input[type="radi
 }
 
 /* line 27, ../scss/_variables.scss */
-h1, h2, h3, h4, h5, h6, li, p, input:not([type="button"]), textarea, select, button {
+h1, h2, h3, h4, h5, h6, li, p, input:not([type="button"]), textarea, select, button, input[type='submit'] {
   font-family: "proxima-nova",sans-serif;
   font-weight: 300;
   color: #3c4d59;
@@ -141,7 +141,7 @@ select {
 }
 
 /* line 55, ../scss/_forms.scss */
-button {
+button, input[type='submit'] {
   display: block;
   outline: none;
   color: #eef2f5;
@@ -157,7 +157,7 @@ button {
   cursor: pointer;
 }
 /* line 72, ../scss/_forms.scss */
-button:hover {
+button:hover, input[type='submit']:hover {
   background-color: #069d66;
   box-shadow: 0 2px 0 #035336;
   text-shadow: 0 1px 0 #035336;
