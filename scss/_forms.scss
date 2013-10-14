@@ -52,6 +52,31 @@ select {
 	-webkit-appearance: none;
 }
 
+button {
+	@extend %font;
+	@extend %smooth;
+	display: block;
+	outline: none;
+	color: $light_color;
+	font-weight: 500;
+	border: none;
+	font-size: 1.2rem;
+	height: 3rem;
+	border-radius: 2px;
+	background-color: $brand_color;
+	width: 300px;
+	box-shadow: 0 2px 0 $brand_color_dark;
+	text-shadow: 0 1px 0 $brand_color_dark;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $brand_color_dark;
+		box-shadow: 0 2px 0 darken($brand_color_dark, 15%);
+		text-shadow: 0 1px 0 darken($brand_color_dark, 15%);
+		
+	}
+}
+
 label.custom {
 	@extend %smooth;
 	font-weight: 300;

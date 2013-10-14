@@ -1,5 +1,5 @@
 /* line 13, ../scss/_variables.scss */
-h1, h2, h3, h4, h5, h6, li, p, label.custom, html, body {
+h1, h2, h3, h4, h5, h6, li, p, button, label.custom, html, body {
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: 'liga', 'dlig';
   -moz-font-feature-settings: 'liga', 'dlig';
@@ -15,7 +15,7 @@ a, input:not([type="button"]), textarea, select, label.custom > input[type="radi
 }
 
 /* line 27, ../scss/_variables.scss */
-h1, h2, h3, h4, h5, h6, li, p, input:not([type="button"]), textarea, select {
+h1, h2, h3, h4, h5, h6, li, p, input:not([type="button"]), textarea, select, button {
   font-family: "proxima-nova",sans-serif;
   font-weight: 300;
   color: #3c4d59;
@@ -141,6 +141,29 @@ select {
 }
 
 /* line 55, ../scss/_forms.scss */
+button {
+  display: block;
+  outline: none;
+  color: #eef2f5;
+  font-weight: 500;
+  border: none;
+  font-size: 1.2rem;
+  height: 3rem;
+  border-radius: 2px;
+  background-color: #08c681;
+  width: 300px;
+  box-shadow: 0 2px 0 #069d66;
+  text-shadow: 0 1px 0 #069d66;
+  cursor: pointer;
+}
+/* line 72, ../scss/_forms.scss */
+button:hover {
+  background-color: #069d66;
+  box-shadow: 0 2px 0 #035336;
+  text-shadow: 0 1px 0 #035336;
+}
+
+/* line 80, ../scss/_forms.scss */
 label.custom {
   font-weight: 300;
   position: relative;
@@ -149,13 +172,13 @@ label.custom {
   padding-left: 1.35em;
   margin-right: 20px;
 }
-/* line 64, ../scss/_forms.scss */
+/* line 89, ../scss/_forms.scss */
 label.custom > input[type="radio"], label.custom > input[type="checkbox"] {
   position: absolute;
   opacity: 0 !important;
   height: 1em;
 }
-/* line 69, ../scss/_forms.scss */
+/* line 94, ../scss/_forms.scss */
 label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span {
   position: absolute;
   top: 50%;
@@ -167,23 +190,23 @@ label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"]
   border: 2px solid #08c681;
   display: block;
 }
-/* line 83, ../scss/_forms.scss */
+/* line 108, ../scss/_forms.scss */
 label.custom > input[type="radio"]:checked + span, label.custom > input[type="checkbox"]:checked + span {
   box-shadow: #eef2f5 0 0 0 5px inset;
   background-color: #08c681;
 }
-/* line 91, ../scss/_forms.scss */
+/* line 116, ../scss/_forms.scss */
 label.custom > input[type='checkbox'] + span {
   border-radius: 3px;
 }
-/* line 96, ../scss/_forms.scss */
+/* line 121, ../scss/_forms.scss */
 label.custom.disabled {
   opacity: .5;
   font-style: italic;
   cursor: default;
 }
 
-/* line 103, ../scss/_forms.scss */
+/* line 128, ../scss/_forms.scss */
 .label {
   position: absolute;
   z-index: 0;
@@ -195,13 +218,13 @@ label.custom.disabled {
   font-size: 10px;
 }
 
-/* line 116, ../scss/_forms.scss */
+/* line 141, ../scss/_forms.scss */
 .has_value .label {
   top: -4px;
   opacity: 1;
 }
 
-/* line 122, ../scss/_forms.scss */
+/* line 147, ../scss/_forms.scss */
 .parsley-error-list {
   position: absolute;
   bottom: 3rem;
@@ -212,7 +235,7 @@ label.custom.disabled {
   width: 90%;
   border-radius: 2px;
 }
-/* line 132, ../scss/_forms.scss */
+/* line 157, ../scss/_forms.scss */
 .parsley-error-list li {
   font-weight: 700;
   text-align: center;
@@ -221,7 +244,7 @@ label.custom.disabled {
   font-size: .75rem;
   padding: .5em;
 }
-/* line 141, ../scss/_forms.scss */
+/* line 166, ../scss/_forms.scss */
 .parsley-error-list:after {
   position: absolute;
   top: 100%;
@@ -349,4 +372,9 @@ header {
 .extra_margin {
   margin-top: 2rem !important;
   margin-bottom: 1.75rem !important;
+}
+
+/* line 62, ../scss/_grid.scss */
+.centered {
+  margin: 0 auto;
 }
