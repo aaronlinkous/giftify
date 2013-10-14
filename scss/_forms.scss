@@ -21,13 +21,30 @@ input:not([type="button"]), textarea, select {
 		background-color: transparent;
 	}
 
+	&[type='number']{
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+	}
+
 	&::-webkit-input-placeholder,::-moz-placeholder, &:-ms-input-placeholder, &::placeholder {
 		color: $ghosted_color;
 		font-size: .9em;
 	}
 
-	&.is_correct {
+	&.is_valid {
 		border-bottom-color: $brand_color;
+	}
+
+	&.has_error {
+		background-color: rgba($alert_color, .05);
+		border-bottom-color: $alert_color;
+		color: $alert_color;
+
+		&::-webkit-input-placeholder,::-moz-placeholder, &:-ms-input-placeholder, &::placeholder {
+			color: $alert_color;
+			font-size: .9em;
+		}
 	}
 }
 
@@ -99,5 +116,35 @@ label.custom {
 	.label {
 		top: -4px;
 		opacity: 1;
+	}
+}
+
+.parsley-error-list {
+	position: absolute;
+	bottom: 3rem;
+	margin: 0 0 3px 5%;
+	padding: 0;
+	list-style: none;
+	background-color: rgba($alert_color, .85);
+	width: 90%;
+	border-radius: 2px;
+
+	li {
+		font-weight: 700;
+		text-align: center;
+		color: $light_color;
+		text-shadow: 1px 1px 1px darken($alert_color, 15%);
+		font-size: .75rem;
+		padding: .5em;
+	}
+
+	&:after {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -4px;
+		content : ' ';
+		border: 8px solid transparent;
+		border-top-color: rgba($alert_color, .85);
 	}
 }

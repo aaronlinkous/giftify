@@ -110,22 +110,37 @@ input:not([type="button"]):focus, textarea:focus, select:focus {
   border-color: #3c4d59;
   background-color: transparent;
 }
-/* line 24, ../scss/_forms.scss */
+/* line 25, ../scss/_forms.scss */
+input:not([type="button"])[type='number']::-webkit-outer-spin-button, input:not([type="button"])[type='number']::-webkit-inner-spin-button, textarea[type='number']::-webkit-outer-spin-button, textarea[type='number']::-webkit-inner-spin-button, select[type='number']::-webkit-outer-spin-button, select[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* line 30, ../scss/_forms.scss */
 input:not([type="button"])::-webkit-input-placeholder, input:not([type="button"]) ::-moz-placeholder, input:not([type="button"]):-ms-input-placeholder, input:not([type="button"])::placeholder, textarea::-webkit-input-placeholder, textarea ::-moz-placeholder, textarea:-ms-input-placeholder, textarea::placeholder, select::-webkit-input-placeholder, select ::-moz-placeholder, select:-ms-input-placeholder, select::placeholder {
   color: #a4acb2;
   font-size: .9em;
 }
-/* line 29, ../scss/_forms.scss */
-input:not([type="button"]).is_correct, textarea.is_correct, select.is_correct {
+/* line 35, ../scss/_forms.scss */
+input:not([type="button"]).is_valid, textarea.is_valid, select.is_valid {
   border-bottom-color: #08c681;
 }
+/* line 39, ../scss/_forms.scss */
+input:not([type="button"]).has_error, textarea.has_error, select.has_error {
+  background-color: rgba(234, 30, 78, 0.05);
+  border-bottom-color: #ea1e4e;
+  color: #ea1e4e;
+}
+/* line 44, ../scss/_forms.scss */
+input:not([type="button"]).has_error::-webkit-input-placeholder, input:not([type="button"]).has_error ::-moz-placeholder, input:not([type="button"]).has_error:-ms-input-placeholder, input:not([type="button"]).has_error::placeholder, textarea.has_error::-webkit-input-placeholder, textarea.has_error ::-moz-placeholder, textarea.has_error:-ms-input-placeholder, textarea.has_error::placeholder, select.has_error::-webkit-input-placeholder, select.has_error ::-moz-placeholder, select.has_error:-ms-input-placeholder, select.has_error::placeholder {
+  color: #ea1e4e;
+  font-size: .9em;
+}
 
-/* line 34, ../scss/_forms.scss */
+/* line 51, ../scss/_forms.scss */
 select {
   -webkit-appearance: none;
 }
 
-/* line 38, ../scss/_forms.scss */
+/* line 55, ../scss/_forms.scss */
 label.custom {
   font-weight: 300;
   position: relative;
@@ -134,13 +149,13 @@ label.custom {
   padding-left: 1.35em;
   margin-right: 20px;
 }
-/* line 47, ../scss/_forms.scss */
+/* line 64, ../scss/_forms.scss */
 label.custom > input[type="radio"], label.custom > input[type="checkbox"] {
   position: absolute;
   opacity: 0 !important;
   height: 1em;
 }
-/* line 52, ../scss/_forms.scss */
+/* line 69, ../scss/_forms.scss */
 label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span {
   position: absolute;
   top: 50%;
@@ -152,23 +167,23 @@ label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"]
   border: 2px solid #08c681;
   display: block;
 }
-/* line 66, ../scss/_forms.scss */
+/* line 83, ../scss/_forms.scss */
 label.custom > input[type="radio"]:checked + span, label.custom > input[type="checkbox"]:checked + span {
   box-shadow: #eef2f5 0 0 0 5px inset;
   background-color: #08c681;
 }
-/* line 74, ../scss/_forms.scss */
+/* line 91, ../scss/_forms.scss */
 label.custom > input[type='checkbox'] + span {
   border-radius: 3px;
 }
-/* line 79, ../scss/_forms.scss */
+/* line 96, ../scss/_forms.scss */
 label.custom.disabled {
   opacity: .5;
   font-style: italic;
   cursor: default;
 }
 
-/* line 86, ../scss/_forms.scss */
+/* line 103, ../scss/_forms.scss */
 .label {
   position: absolute;
   z-index: 0;
@@ -180,10 +195,41 @@ label.custom.disabled {
   font-size: 10px;
 }
 
-/* line 99, ../scss/_forms.scss */
+/* line 116, ../scss/_forms.scss */
 .has_value .label {
   top: -4px;
   opacity: 1;
+}
+
+/* line 122, ../scss/_forms.scss */
+.parsley-error-list {
+  position: absolute;
+  bottom: 3rem;
+  margin: 0 0 3px 5%;
+  padding: 0;
+  list-style: none;
+  background-color: rgba(234, 30, 78, 0.85);
+  width: 90%;
+  border-radius: 2px;
+}
+/* line 132, ../scss/_forms.scss */
+.parsley-error-list li {
+  font-weight: 700;
+  text-align: center;
+  color: #eef2f5;
+  text-shadow: 1px 1px 1px #ab1035;
+  font-size: .75rem;
+  padding: .5em;
+}
+/* line 141, ../scss/_forms.scss */
+.parsley-error-list:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -4px;
+  content: ' ';
+  border: 8px solid transparent;
+  border-top-color: rgba(234, 30, 78, 0.85);
 }
 
 /* line 1, ../scss/_core.scss */
