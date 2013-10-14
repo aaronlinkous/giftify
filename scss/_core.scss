@@ -30,6 +30,35 @@ header {
 	height: $grid*5;
 }
 
+nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	ul {
+		@extend %clear;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			float: left;
+		}
+	}
+
+	span {
+		
+	}
+
+	#nav_home span {
+		
+	}
+
+	#nav_account span {
+		
+	}
+}
+
 #headline {
 	position: absolute;
 	bottom: 0;

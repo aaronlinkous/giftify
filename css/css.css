@@ -23,18 +23,18 @@ h1, h2, h3, h4, h5, h6, li, p, input:not([type="button"]), textarea, select, but
 }
 
 /* line 34, ../scss/_variables.scss */
-.row {
+nav ul, .row {
   clear: both;
 }
 /* line 37, ../scss/_variables.scss */
-.row:after, .row:before {
+nav ul:after, .row:after, nav ul:before, .row:before {
   display: table;
   content: "";
   line-height: 0;
   visibility: hidden;
 }
 /* line 44, ../scss/_variables.scss */
-.row:after {
+nav ul:after, .row:after {
   clear: both;
 }
 
@@ -307,6 +307,23 @@ header {
 }
 
 /* line 33, ../scss/_core.scss */
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 38, ../scss/_core.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 44, ../scss/_core.scss */
+nav ul li {
+  float: left;
+}
+
+/* line 62, ../scss/_core.scss */
 #headline {
   position: absolute;
   bottom: 0;
@@ -317,7 +334,7 @@ header {
   background-color: #eef2f5;
 }
 
-/* line 43, ../scss/_core.scss */
+/* line 72, ../scss/_core.scss */
 #wrapper {
   margin: 0 auto;
   width: 960px;
