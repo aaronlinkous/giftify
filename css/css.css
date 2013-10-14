@@ -88,6 +88,20 @@ a:hover {
   color: #069d66;
 }
 
+/* line 1, ../scss/_icons.scss */
+[class^="icon_"] {
+  background-size: 3rem auto;
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+}
+
+/* line 9, ../scss/_icons.scss */
+.icon_account {
+  background-image: url("../images/icon_account@2x.png");
+}
+
 /* line 1, ../scss/_forms.scss */
 input:not([type="button"]), textarea, select {
   width: 100%;
@@ -303,14 +317,14 @@ header {
   background: -ms-radial-gradient(top, ellipse cover, #08c681 0%, #069d66 100%);
   background: radial-gradient(ellipse at top, #08c681 0%, #069d66 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$brand_color', endColorstr=' $brand_color_dark',GradientType=1 );
-  height: 300px;
+  height: 360px;
 }
 
 /* line 33, ../scss/_core.scss */
 nav {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
 }
 /* line 38, ../scss/_core.scss */
 nav ul {
@@ -322,8 +336,20 @@ nav ul {
 nav ul li {
   float: left;
 }
+/* line 49, ../scss/_core.scss */
+nav a {
+  color: #eef2f5 !important;
+  font-weight: 500;
+  display: block;
+}
+/* line 55, ../scss/_core.scss */
+nav span {
+  line-height: 3rem;
+  float: left;
+  height: 3rem;
+}
 
-/* line 62, ../scss/_core.scss */
+/* line 63, ../scss/_core.scss */
 #headline {
   position: absolute;
   bottom: 0;
@@ -334,7 +360,7 @@ nav ul li {
   background-color: #eef2f5;
 }
 
-/* line 72, ../scss/_core.scss */
+/* line 73, ../scss/_core.scss */
 #wrapper {
   margin: 0 auto;
   width: 960px;

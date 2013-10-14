@@ -27,13 +27,13 @@ header {
 	background: -ms-radial-gradient(top, ellipse cover, $brand_color 0%, $brand_color_dark 100%);
 	background: radial-gradient(ellipse at top, $brand_color 0%, $brand_color_dark 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand_color', endColorstr=' $brand_color_dark',GradientType=1 );
-	height: $grid*5;
+	height: $grid*6;
 }
 
 nav {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: $gutter;
 
 	ul {
 		@extend %clear;
@@ -46,17 +46,18 @@ nav {
 		}
 	}
 
+	a {
+		color: $light_color !important;
+		font-weight: 500;
+		display: block;
+	}
+
 	span {
-		
+		line-height: 3rem;
+		float: left;
+		height: 3rem;
 	}
 
-	#nav_home span {
-		
-	}
-
-	#nav_account span {
-		
-	}
 }
 
 #headline {
