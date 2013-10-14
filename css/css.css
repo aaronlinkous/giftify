@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, li, p, button, input[type='submit'], label.custom, html,
 }
 
 /* line 21, ../scss/_variables.scss */
-a, input:not([type="button"]), textarea, select, button, input[type='submit'], label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span, .label {
+a, input:not([type="button"]), textarea, select, button, input[type='submit'], label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span, .label, nav span {
   -moz-transition: all 0.125s ease-in-out;
   -webkit-transition: all 0.125s ease-in-out;
   transition: all 0.125s ease-in-out;
@@ -323,7 +323,7 @@ header {
 /* line 33, ../scss/_core.scss */
 nav {
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 20px;
 }
 /* line 38, ../scss/_core.scss */
@@ -337,19 +337,17 @@ nav ul li {
   float: left;
 }
 /* line 49, ../scss/_core.scss */
-nav a {
-  color: #eef2f5 !important;
-  font-weight: 500;
-  display: block;
-}
-/* line 55, ../scss/_core.scss */
 nav span {
   line-height: 3rem;
-  float: left;
   height: 3rem;
+  border-radius: 50%;
+}
+/* line 55, ../scss/_core.scss */
+nav span:hover {
+  background-color: #08c681;
 }
 
-/* line 63, ../scss/_core.scss */
+/* line 62, ../scss/_core.scss */
 #headline {
   position: absolute;
   bottom: 0;
@@ -360,7 +358,7 @@ nav span {
   background-color: #eef2f5;
 }
 
-/* line 73, ../scss/_core.scss */
+/* line 72, ../scss/_core.scss */
 #wrapper {
   margin: 0 auto;
   width: 960px;
