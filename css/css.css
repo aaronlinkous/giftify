@@ -372,6 +372,11 @@ nav span:hover {
   padding: 1.75rem 0 1.75rem;
 }
 
+/* line 79, ../scss/_core.scss */
+#email_upload {
+  display: none;
+}
+
 /* line 1, ../scss/_grid.scss */
 .row {
   position: relative;

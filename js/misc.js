@@ -2,6 +2,7 @@ function check_val(input) {
 	$(input).val() != "" ? $(input).parent().addClass("has_value") : $(input).parent().removeClass("has_value");
 }
 
+var dropZoneTimer;
 $(document).ready(function(){
 	$("#date").pickadate({
 		today: '',
@@ -40,4 +41,16 @@ $(document).ready(function(){
 
 		$("#"+which).slideToggle();
 	});
+}).on('drop dragleave dragend', function (event) {  
+	dropZoneVisible = false;
+
+	clearTimeout(dropZoneTimer);
+		dropZoneTimer = setTimeout( function(){
+		if(!dropZoneVisible) {
+			$('#email_upload').show(); 
+		} else {
+			dropZoneVisible = false;
+			$('#email_upload').hide(); 
+		}
+	}, 50);
 });
