@@ -19,10 +19,6 @@
 	display: -webkit-box;
 	display: box;
 
-	&.align_center {
-		-webkit-box-pack: center;
-	}
-
 	> * {
 		position: relative;
 		width: 0; //this is required for some really odd reason
@@ -44,6 +40,9 @@
 		flex: 2;
 	}
 
+	> .touching {
+		margin-right: 0;
+	}
 }
 
 .no_margin {
