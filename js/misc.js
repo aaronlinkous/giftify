@@ -33,4 +33,11 @@ $(document).ready(function(){
 		label = $(this).attr("placeholder");
 		if(label) $(this).parent().append('<div class="label">'+label+'</div>');
 	});
+
+	$("[data-toggle]").on("click", function(e) {
+		e.stopPropagation();
+		which = $(this).attr("data-toggle");
+
+		$("#"+which).slideToggle();
+	});
 });

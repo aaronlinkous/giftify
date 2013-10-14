@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Giftify | Gift Exchanges Made Easy</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/picker.css" media="screen" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="js/parsley.js"></script>
+		<script src="js/picker.js"></script>
+		<script src="js/picker.date.js"></script>
+		<script src="js/picker.time.js"></script>
+		<script src="js/misc.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li id="nav_account"><a href="/" title="My Account"><span class="icon_account"></span></a></li>
+				</ul>
+			</nav>
+
+			<section id="headline">
+				<h1>Hot lava! You're half way there!</h1>
+			</section>
+		</header>
+
+		<article id="wrapper">
+			<div class="row">
+				<p>Now just tell us about yourself and then invite some guests to the party.</p>
+			</div>
+
+			<form data-validate="parsley" novalidate>
+				<div class="row extra_margin">
+					<label class="custom">
+						<input id="new" tabindex="-1" name="user" type="radio" data-toggle="new_user" checked /><span></span> I am a New User
+					</label>
+
+					<label class="custom">
+						<input id="existing" tabindex="-1" name="user" type="radio" data-toggle="new_user" /><span></span> I already have an Account
+					</label>
+				</div>
+
+				<section id="new_user" class="row full_width">
+					<div class="row split">
+						<div>
+							<input class="check_val" name="fname" type="text" placeholder="First Name" required="required" data-trigger="keyup" />
+						</div>
+
+						<div>
+							<input class="check_val" name="lname" type="text" placeholder="Last Name" required="required" data-trigger="keyup" />
+						</div>
+					</div>
+				</section>
+
+				<div class="row split">
+					<div>
+						<input class="check_val" name="email" type="email" placeholder="Email" required="required" data-trigger="blur" />
+					</div>
+
+					<div>
+						<input class="check_val" name="password" type="password" placeholder="Password" data-minlength="6" required="required" data-trigger="blur" />
+					</div>
+				</div>
+
+				<div class="row">
+					<textarea placeholder="Guest's Email Addresses" required="required" data-trigger="blur"></textarea>
+				</div>
+
+				<div class="row">
+					<button class="validate centered cta">Submit</button>
+				</div>
+
+			</form>
+		</article>
+	</body>
+</html>
