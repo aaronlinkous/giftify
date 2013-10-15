@@ -310,9 +310,10 @@ label.custom.disabled {
   z-index: 2;
   height: 6rem;
   opacity: 0;
+  cursor: pointer;
 }
 
-/* line 218, ../scss/_forms.scss */
+/* line 219, ../scss/_forms.scss */
 #man_email {
   display: none;
 }
