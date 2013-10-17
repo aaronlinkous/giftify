@@ -89,7 +89,7 @@ a:hover {
 }
 
 /* line 1, ../scss/_icons.scss */
-[class^="icon_"] {
+.icon {
   background-size: 3rem auto;
   background-repeat: no-repeat;
   height: 3rem;
@@ -98,12 +98,34 @@ a:hover {
 }
 
 /* line 9, ../scss/_icons.scss */
-.icon_account {
+.background {
+  background-size: 3rem auto;
+  background-repeat: no-repeat;
+}
+
+/* line 14, ../scss/_icons.scss */
+nav span {
   background-image: url("../images/icon_account@2x.png");
+}
+
+/* line 18, ../scss/_icons.scss */
+select {
+  background-image: url("../images/dd_ghosted@2x.png");
+}
+
+/* line 26, ../scss/_icons.scss */
+.has_value select {
+  background-image: url("../images/dd_has_value@2x.png");
+}
+
+/* line 30, ../scss/_icons.scss */
+select.has_error {
+  background-image: url("../images/dd_has_error@2x.png");
 }
 
 /* line 1, ../scss/_forms.scss */
 input:not([type="button"]), textarea, select {
+  border-radius: 0;
   width: 100%;
   color: #3c4d59;
   background-color: transparent;
@@ -115,56 +137,59 @@ input:not([type="button"]), textarea, select {
   border-bottom: 1px solid #a4acb2;
   padding: 0 .5em;
 }
-/* line 15, ../scss/_forms.scss */
+/* line 16, ../scss/_forms.scss */
 input:not([type="button"]):hover, textarea:hover, select:hover {
   background-color: rgba(220, 229, 235, 0.25);
 }
-/* line 19, ../scss/_forms.scss */
+/* line 20, ../scss/_forms.scss */
 input:not([type="button"]):focus, textarea:focus, select:focus {
   border-color: #3c4d59;
   background-color: transparent;
 }
-/* line 25, ../scss/_forms.scss */
+/* line 26, ../scss/_forms.scss */
 input:not([type="button"])[type='number']::-webkit-outer-spin-button, input:not([type="button"])[type='number']::-webkit-inner-spin-button, textarea[type='number']::-webkit-outer-spin-button, textarea[type='number']::-webkit-inner-spin-button, select[type='number']::-webkit-outer-spin-button, select[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-/* line 30, ../scss/_forms.scss */
+/* line 31, ../scss/_forms.scss */
 input:not([type="button"])::-webkit-input-placeholder, input:not([type="button"]) ::-moz-placeholder, input:not([type="button"]):-ms-input-placeholder, input:not([type="button"])::placeholder, textarea::-webkit-input-placeholder, textarea ::-moz-placeholder, textarea:-ms-input-placeholder, textarea::placeholder, select::-webkit-input-placeholder, select ::-moz-placeholder, select:-ms-input-placeholder, select::placeholder {
   color: #a4acb2;
   font-size: .9em;
 }
-/* line 35, ../scss/_forms.scss */
+/* line 36, ../scss/_forms.scss */
 input:not([type="button"]).is_valid, textarea.is_valid, select.is_valid {
   border-bottom-color: #08c681;
 }
-/* line 39, ../scss/_forms.scss */
+/* line 40, ../scss/_forms.scss */
 input:not([type="button"]).has_error, textarea.has_error, select.has_error {
   background-color: rgba(234, 30, 78, 0.05);
   border-bottom-color: #ea1e4e;
   color: #ea1e4e;
 }
-/* line 44, ../scss/_forms.scss */
+/* line 45, ../scss/_forms.scss */
 input:not([type="button"]).has_error::-webkit-input-placeholder, input:not([type="button"]).has_error ::-moz-placeholder, input:not([type="button"]).has_error:-ms-input-placeholder, input:not([type="button"]).has_error::placeholder, textarea.has_error::-webkit-input-placeholder, textarea.has_error ::-moz-placeholder, textarea.has_error:-ms-input-placeholder, textarea.has_error::placeholder, select.has_error::-webkit-input-placeholder, select.has_error ::-moz-placeholder, select.has_error:-ms-input-placeholder, select.has_error::placeholder {
   color: #ea1e4e;
   font-size: .9em;
 }
-/* line 49, ../scss/_forms.scss */
+/* line 50, ../scss/_forms.scss */
 input:not([type="button"]).has_error:hover, textarea.has_error:hover, select.has_error:hover {
   background-color: rgba(234, 30, 78, 0.15);
 }
 
-/* line 55, ../scss/_forms.scss */
+/* line 56, ../scss/_forms.scss */
 textarea {
   height: 6rem;
   padding: .5rem;
 }
 
-/* line 60, ../scss/_forms.scss */
+/* line 61, ../scss/_forms.scss */
 select {
+  background-position: right center;
   -webkit-appearance: none;
+  cursor: pointer;
+  color: #a4acb2;
 }
 
-/* line 64, ../scss/_forms.scss */
+/* line 73, ../scss/_forms.scss */
 button, input[type='submit'] {
   display: block;
   outline: none;
@@ -178,28 +203,28 @@ button, input[type='submit'] {
   background-color: #08c681;
   cursor: pointer;
 }
-/* line 81, ../scss/_forms.scss */
+/* line 90, ../scss/_forms.scss */
 button:hover, input[type='submit']:hover {
   background-color: #069d66;
 }
-/* line 85, ../scss/_forms.scss */
+/* line 94, ../scss/_forms.scss */
 button.cta, input[type='submit'].cta {
   width: 300px;
   box-shadow: 0 2px 0 #069d66;
   text-shadow: 0 1px 0 #069d66;
 }
-/* line 90, ../scss/_forms.scss */
+/* line 99, ../scss/_forms.scss */
 button.cta:hover, input[type='submit'].cta:hover {
   box-shadow: 0 2px 0 #046c46;
   text-shadow: 0 1px 0 #046c46;
 }
 
-/* line 97, ../scss/_forms.scss */
+/* line 106, ../scss/_forms.scss */
 .input_button {
   max-width: 3rem !important;
 }
 
-/* line 102, ../scss/_forms.scss */
+/* line 111, ../scss/_forms.scss */
 label.custom {
   font-weight: 300;
   position: relative;
@@ -208,13 +233,13 @@ label.custom {
   padding-left: 1.35em;
   margin-right: 20px;
 }
-/* line 111, ../scss/_forms.scss */
+/* line 120, ../scss/_forms.scss */
 label.custom > input[type="radio"], label.custom > input[type="checkbox"] {
   position: absolute;
   opacity: 0 !important;
   height: 1em;
 }
-/* line 116, ../scss/_forms.scss */
+/* line 125, ../scss/_forms.scss */
 label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"] + span {
   position: absolute;
   top: 50%;
@@ -226,41 +251,45 @@ label.custom > input[type="radio"] + span, label.custom > input[type="checkbox"]
   border: 2px solid #08c681;
   display: block;
 }
-/* line 130, ../scss/_forms.scss */
+/* line 139, ../scss/_forms.scss */
 label.custom > input[type="radio"]:checked + span, label.custom > input[type="checkbox"]:checked + span {
   box-shadow: #eef2f5 0 0 0 5px inset;
   background-color: #08c681;
 }
-/* line 138, ../scss/_forms.scss */
+/* line 147, ../scss/_forms.scss */
 label.custom > input[type='checkbox'] + span {
   border-radius: 3px;
 }
-/* line 143, ../scss/_forms.scss */
+/* line 152, ../scss/_forms.scss */
 label.custom.disabled {
   opacity: .5;
   font-style: italic;
   cursor: default;
 }
 
-/* line 150, ../scss/_forms.scss */
+/* line 159, ../scss/_forms.scss */
 .label {
   position: absolute;
   z-index: 0;
   opacity: 0;
   top: 0;
-  left: 1px;
+  left: .5rem;
   color: #08c681;
   font-weight: 700;
   font-size: 10px;
 }
 
-/* line 163, ../scss/_forms.scss */
+/* line 172, ../scss/_forms.scss */
 .has_value .label {
   top: -2px;
   opacity: 1;
 }
+/* line 177, ../scss/_forms.scss */
+.has_value select {
+  color: #3c4d59;
+}
 
-/* line 169, ../scss/_forms.scss */
+/* line 183, ../scss/_forms.scss */
 .parsley-error-list {
   position: absolute;
   bottom: 3rem;
@@ -271,7 +300,7 @@ label.custom.disabled {
   width: 90%;
   border-radius: 2px;
 }
-/* line 179, ../scss/_forms.scss */
+/* line 193, ../scss/_forms.scss */
 .parsley-error-list li {
   font-weight: 700;
   text-align: center;
@@ -280,7 +309,7 @@ label.custom.disabled {
   font-size: .7rem;
   padding: .5em;
 }
-/* line 188, ../scss/_forms.scss */
+/* line 202, ../scss/_forms.scss */
 .parsley-error-list:after {
   position: absolute;
   top: 100%;
@@ -291,7 +320,7 @@ label.custom.disabled {
   border-top-color: rgba(234, 30, 78, 0.85);
 }
 
-/* line 199, ../scss/_forms.scss */
+/* line 213, ../scss/_forms.scss */
 #email_upload {
   background-image: url("../images/drop_csv@2x.png");
   background-position: center center;
@@ -304,7 +333,7 @@ label.custom.disabled {
   height: 6rem;
 }
 
-/* line 211, ../scss/_forms.scss */
+/* line 225, ../scss/_forms.scss */
 #email_upload_submit_me {
   position: absolute;
   z-index: 2;
@@ -313,7 +342,7 @@ label.custom.disabled {
   cursor: pointer;
 }
 
-/* line 219, ../scss/_forms.scss */
+/* line 233, ../scss/_forms.scss */
 #man_email {
   display: none;
 }
@@ -386,12 +415,12 @@ nav span {
   height: 3rem;
   border-radius: 50%;
 }
-/* line 64, ../scss/_core.scss */
+/* line 65, ../scss/_core.scss */
 nav span:hover {
   background-color: #08c681;
 }
 
-/* line 71, ../scss/_core.scss */
+/* line 72, ../scss/_core.scss */
 #headline {
   position: absolute;
   bottom: 0;
@@ -402,7 +431,7 @@ nav span:hover {
   background-color: #eef2f5;
 }
 
-/* line 81, ../scss/_core.scss */
+/* line 82, ../scss/_core.scss */
 #wrapper {
   margin: 0 auto;
   width: 960px;

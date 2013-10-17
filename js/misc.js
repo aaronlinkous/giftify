@@ -42,9 +42,23 @@ $(document).ready(function(){
 		$("#"+which).toggleClass("not_visible").slideToggle();
 		
 		if($("#"+which).hasClass("not_visible")) {
+			$("#"+which).find("[required='required']").addClass("was_required");
+
+			$("#"+which+" .was_required").each(function(){
+				id = $(this).attr("id");
+				$("form").parsley('removeItem','#'+id);
+			});
+
 			$("#"+which).next().find(".check_val:first").focus();
 		} else {
 			$("#"+which).find(".check_val:first").focus();
+
+			$("#"+which+" .was_required").each(function(){
+				id = $(this).attr("id");
+				$("form").parsley('addItem','#'+id);
+			});
+
+			$("#"+which).find("[required='required']").removeClass("was_required");
 		}
 	});
 });

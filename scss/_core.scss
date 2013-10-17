@@ -57,6 +57,7 @@ nav {
 
 	span {
 		@extend %animated;
+		@extend %icon_account;
 		line-height: 3rem;
 		height: 3rem;
 		border-radius: 50%;
