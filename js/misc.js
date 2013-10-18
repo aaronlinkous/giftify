@@ -22,8 +22,6 @@ $(document).ready(function(){
 		errorClass: "has_error",
 	});
 
-	$(".validate").parsley("validate");
-
 	$(".check_val").each(function(){
 		check_val(this);
 	}).on("keyup click blur focus change paste", function(){
