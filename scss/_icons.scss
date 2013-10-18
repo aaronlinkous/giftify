@@ -1,4 +1,4 @@
-[class^="icon_"] {
+.icon {
 	background-size: 3rem auto;
 	background-repeat: no-repeat;
 	height: 3rem;
@@ -6,6 +6,27 @@
 	display: inline-block;
 }
 
-.icon_account {
+.background {
+	background-size: 3rem auto;
+	background-repeat: no-repeat;
+}
+
+%icon_account {
 	background-image: url("../images/icon_account@2x.png");
+}
+
+%icon_dd_ghosted {
+	background-image: url("../images/dd_ghosted@2x.png");
+}
+
+%icon_dd_focus {
+	background-image: url("../images/dd_focus@2x.png");
+}
+
+%icon_dd_has_value {
+	background-image: url("../images/dd_has_value@2x.png");
+}
+
+%icon_dd_has_error {
+	background-image: url("../images/dd_has_error@2x.png");
 }

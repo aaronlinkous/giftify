@@ -18,6 +18,15 @@ img {
 	width: 100%;
 }
 
+.center {
+	text-align: center;
+	display: block;
+}
+
+.detail {
+	font-size: .85rem;
+}
+
 header {
 	position: relative;
 	background: $brand_color;
@@ -32,7 +41,7 @@ header {
 
 nav {
 	position: absolute;
-	top: 0;
+	top: $gutter;
 	right: $gutter;
 
 	ul {
@@ -46,16 +55,16 @@ nav {
 		}
 	}
 
-	a {
-		color: $light_color !important;
-		font-weight: 500;
-		display: block;
-	}
-
 	span {
+		@extend %animated;
+		@extend %icon_account;
 		line-height: 3rem;
-		float: left;
 		height: 3rem;
+		border-radius: 50%;
+
+		&:hover {
+			background-color: $brand_color;
+		}
 	}
 
 }

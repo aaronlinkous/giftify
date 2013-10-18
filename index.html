@@ -15,7 +15,7 @@
 		<header>
 			<nav>
 				<ul>
-					<li id="nav_account"><a href="/"><span class="icon_account"></span><span>My Account</span></a></li>
+					<li id="nav_account"><a href="/" title="My Account"><span class="icon"></span></a></li>
 				</ul>
 			</nav>
 
@@ -26,7 +26,7 @@
 
 		<article id="wrapper">
 			<div class="row">
-				<p>First, we just need some basic information about your event. Then we'll ask about your guests.</p>
+				<p>First, we just need some basic information about your event and then we'll ask about you and your guests.</p>
 			</div>
 
 			<form data-validate="parsley" novalidate>
@@ -50,45 +50,27 @@
 					</div>
 
 					<div>
-						<input class="check_val" id="limit" name="limit" type="text" placeholder="Gift Price Limit" required="required" data-type="number" data-trigger="keyup" />
+						<select placeholder="Event Type" class="check_val background is_valid" required="required" data-trigger="change">
+							<option value="">Event Type</option>
+							<option value="ss" selected>Secret Santa</option>
+							<option value="we">White Elephant</option>
+						</select>
 					</div>
 				</div>
 
 				<div class="row extra_margin">
 					<label class="custom">
-						<input id="type" tabindex="-1" name="type" type="radio" checked /><span></span> Private Event
+						<input id="private" tabindex="-1" name="privacy" type="radio" checked /><span></span> Private Event
 					</label>
 
 					<label class="custom disabled">
-						<input id="type" tabindex="-1" name="type" type="radio" disabled /><span></span> Public Event (Coming Soon!)
+						<input id="public" tabindex="-1" name="privacy" type="radio" disabled /><span></span> Public Event (Coming Soon!)
 					</label>
 				</div>
 
 				<div class="row">
-					<button class="validate centered cta">Create Event</button>
+					<button type="submit" class="centered cta">Create Event</button>
 				</div>
-
-<!--
-				<div class="row split">
-					<div>
-						<input class="check_val" name="fname" type="text" placeholder="First Name" />
-					</div>
-
-					<div>
-						<input class="check_val" name="lname" type="text" placeholder="Last  Name" />
-					</div>
-				</div>
-
-				<div class="row split">
-					<div>
-						<input class="check_val" name="email" type="email" placeholder="Email" />
-					</div>
-
-					<div>
-						<input class="check_val" name="password" type="password" placeholder="Password" />
-					</div>
-				</div>
--->
 			</form>
 		</article>
 	</body>

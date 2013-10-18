@@ -1,6 +1,7 @@
 input:not([type="button"]), textarea, select {
 	@extend %animated;
 	@extend %font;
+	border-radius: 0;
 	width: 100%;
 	color: $dark_color;
 	background-color: transparent;
@@ -52,8 +53,21 @@ input:not([type="button"]), textarea, select {
 	}
 }
 
+textarea {
+	height: 6rem;
+	padding: .5rem;
+}
+
 select {
+	@extend %icon_dd_ghosted;
+	background-position: right center;
 	-webkit-appearance: none;
+	cursor: pointer;
+	color: $ghosted_color;
+
+	&.has_error {
+		@extend %icon_dd_has_error;
+	}
 }
 
 button, input[type='submit'] {
@@ -83,8 +97,8 @@ button, input[type='submit'] {
 		text-shadow: 0 1px 0 $brand_color_dark;
 
 		&:hover {
-			box-shadow: 0 2px 0 darken($brand_color_dark, 15%);
-			text-shadow: 0 1px 0 darken($brand_color_dark, 15%);
+			box-shadow: 0 2px 0 darken($brand_color_dark, 10%);
+			text-shadow: 0 1px 0 darken($brand_color_dark, 10%);
 		}
 	}
 }
@@ -148,7 +162,7 @@ label.custom {
 	z-index: 0;
 	opacity: 0;
 	top: 0;
-	left: 1px;
+	left: .5rem;
 	color: $brand_color;
 	font-weight: 700;
 	font-size: 10px;
@@ -158,6 +172,11 @@ label.custom {
 	.label {
 		top: -2px;
 		opacity: 1;
+	}
+
+	select {
+		@extend %icon_dd_has_value;
+		color: $dark_color;
 	}
 }
 
@@ -189,4 +208,28 @@ label.custom {
 		border: 8px solid transparent;
 		border-top-color: rgba($alert_color, .85);
 	}
+}
+
+#email_upload {
+	background-image: url("../images/drop_csv@2x.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 110px auto;
+	background-color: rgba($overlay_color, .5);
+	box-shadow: 0 0 2px 2px $light_color inset;
+	border: 1px solid $ghosted_color;
+	border-radius: 3px;
+	height: 6rem;
+}
+
+#email_upload_submit_me {
+	position: absolute;
+	z-index: 2;
+	height: 6rem;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#man_email {
+	display: none;
 }
