@@ -12,6 +12,43 @@
 		<script src="js/misc.js"></script>
 	</head>
 	<body>
+		<aside id="overlay"></aside>
+		<aside id="login" class="modal">
+			<form data-validate="parsley" novalidate>
+				<div class="row extra_margin">
+					<label class="custom">
+						<input id="existing" tabindex="-1" name="user" type="radio" data-toggle="new_user" checked /><span></span> I already have an Account
+					</label>
+
+					<label class="custom">
+						<input id="new" tabindex="-1" name="user" type="radio" data-toggle="new_user" /><span></span> I am a New User
+					</label>
+				</div>
+
+				<section id="new_user" class="row full_width">
+					<div class="row split">
+						<div>
+							<input class="check_val" id="fname" name="fname" type="text" placeholder="First Name" required="required" data-trigger="keyup" />
+						</div>
+
+						<div>
+							<input class="check_val" id="lname" name="lname" type="text" placeholder="Last Name" required="required" data-trigger="keyup" />
+						</div>
+					</div>
+				</section>
+
+				<div class="row split">
+					<div>
+						<input class="check_val" name="email" type="email" placeholder="Email" required="required" data-trigger="blur" />
+					</div>
+
+					<div>
+						<input class="check_val" name="password" type="password" placeholder="Password" data-minlength="6" required="required" data-trigger="blur" />
+					</div>
+				</div>
+			</form>
+		</aside>
+
 		<header>
 			<nav>
 				<ul>
